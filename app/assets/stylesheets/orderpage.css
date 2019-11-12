@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+}
+
+.order-banner {
+    position: fixed;
+    display: inline-flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    box-shadow: 0em;
+    width: 100%;
+}
+
+.order-banner img {
+    height: 55px;
+}
+
+.dish-container {
+    top: 100px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 {
+    position: relative;
+    width: 440px;
+    height: 300px;
+}
+
+.box1:hover{
+    opacity: 0.7;
+}
+
+.image1 {
+    left: 100px;
+    background: url('order/burrito.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.image2 {
+    right: 190px;
+    background: url('order/burrito-bowl.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box1-text-container {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+}
+
+.box1-title {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button {
+    position: absolute;
+    width: 80px;
+    top: 25px;
+    padding: 5px;
+    background-color: rgb(201, 140, 26);
+}
+
+
+
+
+

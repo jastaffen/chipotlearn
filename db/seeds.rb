@@ -1,0 +1,47 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Ingredient.destroy_all
+Dish.destroy_all
+
+
+danny = User.create(username: "damndamniel", password: "fuckyoujack")
+jack = User.create(username: "jackattack", password: "fuckyoudanny")
+
+carnitas = Ingredient.create(name: "Carnitas", price: 9.45, category: "protein")
+chicken = Ingredient.create(name: "Chicken", price: 8.95, category: "protein")
+steak = Ingredient.create(name: "Steak", price: 9.95, category: "protein")
+carne_asada = Ingredient.create(name: "Carne Asada", price: 10.45, category: "protein")
+barbacoa = Ingredient.create(name: "Barbacoa", price: 9.95, category: "protein")
+sofritas = Ingredient.create(name: "Sofritas", price: 8.95, category: "protein")
+veggie = Ingredient.create(name: "Veggie", price: 8.95, category: "protein")
+
+white_rice = Ingredient.create(name: "White Rice", price: 0, category: "grain")
+brown_rice = Ingredient.create(name: "Brown Rice", price: 0, category: "grain")
+
+pinto_bean = Ingredient.create(name: "Pinto Bean", price: 0, category: "bean")
+black_bean = Ingredient.create(name: "Black Bean", price: 0, category: "bean")
+
+queso = Ingredient.create(name: "Queso", price: 1.40, category: "topping")
+guac = Ingredient.create(name: "Guacamole", price: 3.45, category: "topping")
+salsa = Ingredient.create(name: "Fresh Tomato Salsa", price: 0, category: "topping")
+corn = Ingredient.create(name: "Roasted Corn-Chili Salsa", price: 0, category: "topping")
+verdes = Ingredient.create(name: "Tomatillo-Green Chili Salsa", price: 0, category: "topping")
+hot = Ingredient.create(name: "Tomatillo-Red Chili Salsa", price: 0, category: "topping")
+sour_cream = Ingredient.create(name: "Sour Cream", price: 0, category: "topping")
+fajita_veggies = Ingredient.create(name: "Fajita Veggies", price: 0, category: "topping")
+cheese = Ingredient.create(name: "Cheese", price: 0, category: "topping")
+romaine = Ingredient.create(name: "Romaine Lettuce", price: 0, category: "topping")
+
+burrito = Dish.create(name: "Burrito", dish_price: 0)
+burrito_bowl = Dish.create(name: "Burrito Bowl", dish_price: 0)
+Taco = Dish.create(name: "Taco", dish_price: 0)
+Salad = Dish.create(name: "Salad", dish_price: 0)
+
+
+

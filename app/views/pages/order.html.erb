@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="orderpage.css">
+    </head>
+    <body>
+        <div>
+            <header class="order-banner">
+                <a href=""><%= image_tag("sign-in.png") %></a>
+                <a href="/"><%= image_tag("chipotle-logo-2.png")%></a>
+                <a href=""><%= image_tag("my-bag.png")%></a>
+            </header>
+        </div>
+
+        <div class="dish-container">
+            <a href="/dishes/burrito/new" method="get">
+                <div class="box1 image1">
+                    <div class="box1-text-container">
+                        <p class="box1-title">Burrito</p>
+                        <p class="box1-title button">Order -></p>
+                    </div>
+                </div> 
+            </a>
+
+            <a href="/dishes/burrito-bowl/new" method="get">
+                <div class="box1 image2">
+                    <div class="box1-text-container">
+                        <p class="box1-title">Burrito Bowl</p>
+                        <p class="box1-title button">Order -></p>
+                    </div>
+                </div> 
+            </a>
+
+        </div>
+
+
+    </body>
+</html>

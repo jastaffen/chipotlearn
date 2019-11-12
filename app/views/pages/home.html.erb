@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chipotle Mexican Grill</title>
+        <link type="text/css" rel="stylesheet" href="homepage.css">
+    </head>
+    <body>
+        
+        <header class="nav-bar-container">  
+            <nav>
+                <a href="/" id="home-logo"><%= image_tag("homelogo.png", size: '75')%></a>
+                <div class="center-link">
+                    <a href="order" method="get" target="_blank"><li>Order</li></a>
+                    <a href=""><li>Our Values</li></a>
+                </div>
+                <button type="button" class="find-location"><%= image_tag("pepper.png", size: '15', class: "pepper-in-button")%>| FIND A CHIPOTLE</button>
+            </nav>
+        </header>
+
+        <div class="slogan-container">
+            <h2>EAT. LEARN. CODE.</h2>
+        </div>
+
+        <div class="guac-ad">
+            <%= image_tag("guacamole.png", width: "100%")%>
+        </div>
+    </body>
+</html>

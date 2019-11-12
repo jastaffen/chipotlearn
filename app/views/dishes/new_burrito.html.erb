@@ -1,0 +1,32 @@
+<h1><%= "Make Your Own #{@dish.name.capitalize}!!"%>
+<hr>
+<%= form_for @dish do |f| %>
+    <h3>Choose Your Protein: </h3>
+    <% @proteins.each do |protein| %>
+        <%= f.label protein.name %><br>
+        <%= f.label "$#{protein.price}" %><br>
+        <%= f.radio_button :dish_ingredients, protein.id %><br>
+    <% end %>
+    <hr>
+    <h3>Choose Your Grain: </h3>
+    <% @grains.each do |grain| %>
+        <%= f.label grain.name %><br>
+        <%= f.label "$#{grain.price}" %><br>
+        <%= f.radio_button :dish_ingredients, grain.id %><br>
+    <% end %>
+    <hr>
+    <h3>Le Bean?</h3>
+    <% @beans.each do |bean| %>
+        <%= f.label bean.name %><br>
+        <%= f.label "$#{bean.price}" %><br>
+        <%= f.radio_button :dish_ingredients, bean.id %><br>
+    <% end %>
+    <hr>
+    <h3>Toppings?</h3>
+    <% @toppings.each do |topping| %>
+        <%= f.label topping.name %><br>
+        <%= f.label "$#{topping.price}" %><br>
+        <%= f.radio_button :dish_ingredients, topping.id %><br>
+    <% end %>
+    <%= f.submit "Add to Cart" %>
+<% end %>
