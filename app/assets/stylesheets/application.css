@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+    font-family: "Trade Gothic LT","Helvetica Neue",Arial,sans-serif;
+ }

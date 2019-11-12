@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+}
+
+.header-image{
+    height: 400px; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.9;
+}
+
+.header-text {
+    position: relative;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    font-size: 22px;
+    padding: 75px;
+    text-shadow: 1px 1px black;
+}

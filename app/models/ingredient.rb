@@ -5,4 +5,8 @@ class Ingredient < ApplicationRecord
     def self.select_by_category(category)
         self.all.select { |ingredient| ingredient.category == category }
     end
+
+    def greater_than_zero?
+        self.price > 0.0
+    end
 end
