@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet", type="text/css", href="new_form.css">
+</head>
+<header>
+    <div class="header-image" style="background-image: url(/assets/<%=@dish.image_url%>);">
+        <div class="header-text">
+            <h1><%=@dish.name%></h1>
+            <p><%= @dish.description%></p>
+        </div>
+    </div>
+</header>
+
+<%= form_for @dish do |f| %>
+    <fieldset>
+        <legend>Choose Your Protein:</legend>
+        <% @proteins.each do |protein| %>
+            <%= f.label protein.name %><br>
+            $<%= protein.price %><br>
+            <%= f.radio_button :dish_ingredients, protein.id %><br>
+        <% end %>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Choose Your Grain: </legend>
+        <% @grains.each do |grain| %>
+            <%= f.label grain.name %><br>
+            <%= "$#{grain.price}" if grain.greater_than_zero? %>
+            <%= f.radio_button :dish_ingredients, grain.id %><br>
+        <% end %>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Le Bean?</legend>
+        <% @beans.each do |bean| %>
+            <%= f.label bean.name %><br>
+            <%= "$#{bean.price}" if bean.greater_than_zero? %>
+            <%= f.radio_button :dish_ingredients, bean.id %><br>
+        <% end %>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Toppings?</legend>
+        <% @toppings.each do |topping| %>
+            <%= f.label topping.name %>
+            <%= "$#{topping.price}" if topping.greater_than_zero? %>
+            <%= f.check_box :dish_ingredients, {multiple: true}, topping.id %><br>
+        <% end %>
+    </fieldset>
+    <%= f.submit "Add to Cart" %>
+<% end %>

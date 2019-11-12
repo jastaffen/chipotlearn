@@ -38,10 +38,10 @@ fajita_veggies = Ingredient.create(name: "Fajita Veggies", price: 0, category: "
 cheese = Ingredient.create(name: "Cheese", price: 0, category: "topping")
 romaine = Ingredient.create(name: "Romaine Lettuce", price: 0, category: "topping")
 
-burrito = Dish.create(name: "Burrito", dish_price: 0)
-burrito_bowl = Dish.create(name: "Burrito Bowl", dish_price: 0)
-Taco = Dish.create(name: "Taco", dish_price: 0)
-Salad = Dish.create(name: "Salad", dish_price: 0)
+burrito = Dish.create(name: "Burrito", dish_price: 0, description: "Flour Tortilla With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/burrito.png")
+burrito_bowl = Dish.create(name: "Burrito Bowl", dish_price: 0, description: "Served In A Bowl With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/burrito-bowl.png")
+Taco = Dish.create(name: "Taco", dish_price: 0, description: "Your Choice Of Taco Filled With Meat or Sofritos, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: " ")
+Salad = Dish.create(name: "Salad", dish_price: 0, description: "Chopped Romain Lettuce With Your Choice Of Meat Or Sofritas, Beans, Queso, Salsa, Guacamole, Sour Cream Or Cheese, With Freshly Made Chipotle-Honey Vinaigrette.", image_url: " ")
 
 
 
