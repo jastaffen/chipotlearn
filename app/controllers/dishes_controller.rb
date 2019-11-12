@@ -5,12 +5,18 @@ class DishesController < ApplicationController
         @dishes = Dish.all
     end
 
+    def show
+    end
+
     def new_burrito
-        @dish = Dish.find_by(name: "Burrito")
+        @dish = Dish.new(name: "Burrito", dish_price: 0, description: "Flour Tortilla With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/burrito.png")
     end
 
     def new_burrito_bowl
         @dish = Dish.find_by(name: "Burrito Bowl")
+    end
+
+    def create
     end
 
     private

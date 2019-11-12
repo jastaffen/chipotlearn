@@ -4,7 +4,7 @@
     <title>Chipotle Mexican Grill</title>
     <%= favicon_link_tag 'favicon-96x96.png'%>
     <!--<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">-->
-    
+    <link rel="stylesheet" type="text/css" href="orderpage.css">
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,6 +14,13 @@
   </head>
 
   <body>
+    <div>
+            <header class="order-banner">
+                <a href=""><%= image_tag("sign-in.png") %></a>
+                <a href="/"><%= image_tag("chipotle-logo-2.png")%></a>
+                <a href=""><%= image_tag("my-bag.png")%></a>
+            </header>
+        </div>
     <%= yield %>
   </body>
 </html>

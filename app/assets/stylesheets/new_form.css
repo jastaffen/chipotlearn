@@ -3,6 +3,8 @@ body {
 }
 
 .header-image{
+    position: relative;
+    top: 80px;
     height: 400px; 
     background-repeat: no-repeat;
     background-size: 100%;
@@ -18,4 +20,9 @@ body {
     font-size: 22px;
     padding: 75px;
     text-shadow: 1px 1px black;
+}
+
+.form {
+    position: relative;
+    top: 90px;
 }
