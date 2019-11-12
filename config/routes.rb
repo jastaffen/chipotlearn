@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   get "/order", to: "pages#order"
 
   get "/dishes", to: "dishes#index"
-  get "/dishes/:id", to: "dishes#show", as: "dish"
   get "dishes/burrito/new", to: "dishes#new_burrito", as: "new_burrito"
   get "dishes/burrito-bowl/new", to: "dishes#new_burrito_bowl", as: "new_burrito_bowl"
+  post "dishes/", to: "dishes#create"
+  get "/dishes/:id", to: "dishes#show", as: "dish"
+  
+  
+  get "bag", to: "bag#index"
 end
