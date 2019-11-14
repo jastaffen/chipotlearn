@@ -69,6 +69,12 @@ body {
 }
 
 
-
+.flash-notification {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-size: 25px;
+    color:rgb(80, 18, 18);
+}
 
 

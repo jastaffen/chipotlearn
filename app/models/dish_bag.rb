@@ -1,4 +1,5 @@
 class DishBag < ApplicationRecord
-  belongs_to :dish_id
-  belongs_to :bag_id
+  belongs_to :dish
+  belongs_to :bag
+
 end

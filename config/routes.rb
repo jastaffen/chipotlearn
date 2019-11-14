@@ -4,12 +4,28 @@ Rails.application.routes.draw do
   
   get "/order", to: "pages#order"
 
-  get "/dishes", to: "dishes#index"
+  get "/users", to: "users#index"
+  get "/users/new", to: "users#new", as: "new_user"
+  post "/users/", to: "users#create"
+
+  get "/login/new", to: "login#new", as: "new_login"
+  post "/login", to: "login#create"
+  
+  get "/logout", to: "login#destroy"
+  
+  
+
+  get "/dishes", to: "dishes#index", as: "dishes"
+  get "dishes/:id", to: "dishes#show", as: "dish"
   get "dishes/burrito/new", to: "dishes#new_burrito", as: "new_burrito"
   get "dishes/burrito-bowl/new", to: "dishes#new_burrito_bowl", as: "new_burrito_bowl"
   post "dishes/", to: "dishes#create"
-  get "/dishes/:id", to: "dishes#show", as: "dish"
+  get "dishes/:id/edit", to: "dishes#edit"
+  patch "/dishes/:id", to: "dishes#update"
+  delete "/dishes/:id", to: "dishes#destroy", as: 'delete_dish'
   
   
-  get "bag", to: "bag#index"
+  
+  
+  get "bags/:id", to: "bags#show", as: "bag"
 end

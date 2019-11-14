@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <!--cut banner to put into application.html.erb -->
-
+        <% if flash[:notification] %>
+            <h5 class="flash-notification"><%= flash[:notification] %></h5><br>
+        <% end %>
+        
         <div class="dish-container">
             <a href="/dishes/burrito/new" method="get">
                 <div class="box1 image1">

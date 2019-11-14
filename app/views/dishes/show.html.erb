@@ -1,0 +1,8 @@
+<div style="position: absolute; top: 200px;">
+    <%= @dish.name %>
+    <%= image_tag(@dish.image_url)%>
+    <%= @dish.description %>
+    <% @dish.ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+    <% end %>
+</div>
