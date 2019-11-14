@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link type="text/css" rel="stylesheet"  href="user_login.css">
+        </head>
+        <body>
+            <div class="slogan-container">
+                <h2>EAT. LEARN. SIGN UP.</h2>
+            </div>
+            <% if flash[:messages] %>
+                <h4><%= "There's a problem." %></h4>
+                <% flash[:messages].each do |msg| %>
+                <ul>
+                    <li><%= msg %></li><br>
+                </ul>
+                <% end%>
+            <% end %>
+            <%= form_for @user do |f| %>
+                <%= f.label :username%>:  <br>
+                <%= f.text_field :username %><br>
+                <%= f.label "Password:" %><br>
+                <%= f.password_field :password %><br>
+                <%= f.submit "Sign Up" %>
+            <% end %>
+        </body>
+    </html>
+

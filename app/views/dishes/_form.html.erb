@@ -11,48 +11,50 @@
 </header>
 <div class="form">
     <%= form_for @dish do |f| %>
+    <input type="hidden" name="dish" value="<%=@dish.save ? @dish.id : nil %>">
         <fieldset>
             <legend>Choose Your Protein:</legend>
+            
             <% @proteins.each do |protein| %>
+                
                 <%= f.label protein.name %><br>
                 $<%= protein.price %><br>
-                <%= f.radio_button :dish_ingredients, protein.id %><br>
+                <input type="radio" name="ingredient[protein]" value="<%= protein.id %>" required><br>
             <% end %>
         </fieldset>
-    <% end %>
-    <hr>
-    <%= form_for @dish do |f| %>
+      <hr>
         <fieldset>
             <legend>Choose Your Grain: </legend>
-            <% @grains.each do |grain| %>
-                <%= f.label grain.name %><br>
-                <%= "$#{grain.price}" if grain.greater_than_zero? %>
-                <%= f.radio_button :dish_ingredients, grain.id %><br>
-            <% end %>
+                <% @grains.each do |grain| %>
+                    <%= f.label grain.name %><br>
+                    <%= "$#{grain.price}" if grain.greater_than_zero? %>
+                    <input type="radio" name="ingredient[grain]" value="<%= grain.id %>"><br>   
+                <% end %>
         </fieldset>
-    <% end %>
-    <hr>
-    <%= form_for @dish do |f| %>
+        <hr>
         <fieldset>
             <legend>Le Bean?</legend>
-            <% @beans.each do |bean| %>
-                <%= f.label bean.name %><br>
-                <%= "$#{bean.price}" if bean.greater_than_zero? %>
-                <%= f.radio_button :dish_ingredients, bean.id %><br>
-            <% end %>
+                <% @beans.each do |bean| %>
+                    <%= f.label bean.name %><br>
+                    <%= "$#{bean.price}" if bean.greater_than_zero? %>
+                    <input type="radio" name="ingredient[bean]" value="<%= bean.id %>"><br>
+                <% end %>
         </fieldset>
-    <% end %>
-    <hr>
-    <%= form_for @dish do |f| %>
+        <hr>
         <fieldset>
             <legend>Toppings?</legend>
-            <% @toppings.each do |topping| %>
-                <%= f.label topping.name %>
-                <%= "$#{topping.price}" if topping.greater_than_zero? %>
-                <%= f.check_box :dish_ingredients, {multiple: true}, topping.id %><br>
+            <%= f.fields_for @toppings do |t| %>
+                <% @toppings.each do |topping| %>
+                    <%= t.label topping.name %>
+                    <%= "$#{topping.price}" if topping.greater_than_zero? %>
+                    <input type="checkbox" name="ingredient[toppings][<%= topping.name %>]" value="<%=topping.id%>"><br>
+                <% end %>
             <% end %>
         </fieldset>
-        <%= f.submit "Add to Cart" %>
+
+        
+
+        <%= f.submit %>
     <% end %>
     
 </div>

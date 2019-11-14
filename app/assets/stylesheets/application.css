@@ -17,3 +17,32 @@
  * {
     font-family: "Trade Gothic LT","Helvetica Neue",Arial,sans-serif;
  }
+
+ 
+.order-banner strong {
+   color: rgb(91, 25, 25);
+   
+   font-size: 25px;
+   padding: 10px;
+}
+
+.logout {
+   text-decoration: none;
+   position: absolute;
+   border: 1px solid whitesmoke;
+   padding: 5px;
+   top: 12px;
+   right: 15px;
+   background-color:rgb(91, 25, 25);
+   color: white;
+   font-weight: 900;
+   border-radius: 10px;
+}
+
+.logout:hover {
+   color: rgb(223, 199, 16);
+}
+
+.logout:active {
+   background-color: red;
+}

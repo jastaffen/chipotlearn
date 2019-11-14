@@ -16,9 +16,18 @@
   <body>
     <div>
             <header class="order-banner">
-                <a href=""><%= image_tag("sign-in.png") %></a>
+                <% if session[:username] %>
+                  <strong><%= "Hey #{session[:username]}!" %></strong>
+                  <%= link_to "logout", "/logout", {class: "logout"} %>
+                <% else%>
+                  <a href="/login/new"><%= image_tag("sign-in.png") %></a>
+                <% end %>
                 <a href="/"><%= image_tag("chipotle-logo-2.png")%></a>
-                <a href=""><%= image_tag("my-bag.png")%></a>
+                <% if session[:username] %>
+                    <% @user = User.find_by(username: session[:username])%>
+                    <a href="/bags/<%=@user.bag.id%>"><%=@user.bag.dish_bags.count %> <%= image_tag("my-bag.png")%></a>
+                <% end %>
+                
             </header>
         </div>
     <%= yield %>
