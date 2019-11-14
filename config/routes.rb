@@ -25,7 +25,11 @@ Rails.application.routes.draw do
   delete "/dishes/:id", to: "dishes#destroy", as: 'delete_dish'
   
   
-  
+ 
   
   get "bags/:id", to: "bags#show", as: "bag"
+
+  get "/api/form", to: "api#form"
+  post "/api/", to: "api#location"
+  get "/api/select", to: "api#select"
 end
