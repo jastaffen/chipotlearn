@@ -4,6 +4,7 @@ body {
 
 .order-banner {
     position: fixed;
+    top: 0px;
     display: inline-flex;
     justify-content: space-evenly;
     border-bottom: 1px solid black;
@@ -17,18 +18,31 @@ body {
     height: 55px;
 }
 
-.dish-container {
-    top: 100px;
-    width: 100%;
+.flash-notification {
     position: relative;
+    top: 20px;
+    text-align: center;
+    font-size: 25px;
+    color:rgb(80, 18, 18);
+}
+
+.all {
+    margin: 0 auto;
+    width: 1050px;
+}
+
+.dish-container {
     display: flex;
-    justify-content: space-between;
+    flex-flow: wrap;
+    /*position: relative;*/
+    /* justify-content: space-between; */
 }
 
 .box1 {
     position: relative;
-    width: 440px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
+    top: 90px;
 }
 
 .box1:hover{
@@ -36,17 +50,32 @@ body {
 }
 
 .image1 {
-    left: 100px;
+    text-align: center;
     background: url('order/burrito.png');
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0px 10px 10px 0px;
 }
 .image2 {
-    right: 190px;
+    text-align: center;
     background: url('order/burrito-bowl.png');
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0px 10px 10px 0px;
 }
+
+.image3 {
+    text-align: center;
+    background: url("order/taco.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* a .image3 {
+    display: block;
+    bottom: 5px;
+} */
+
 
 .box1-text-container {
     position: absolute;
@@ -69,12 +98,16 @@ body {
 }
 
 
-.flash-notification {
-    position: relative;
-    top: 100px;
-    text-align: center;
-    font-size: 25px;
-    color:rgb(80, 18, 18);
-}
+
+
+/* .column {
+    flex: 50%;
+    padding: 0 4px;
+  } */
+  
+  /* .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  } */
 
 

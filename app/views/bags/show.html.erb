@@ -1,4 +1,5 @@
 
+
 <div class="bag-banner">
     <h1><%= "#{@user.username}'s Bag!"%></h1>
     <%= image_tag("chipotle-logo-2.png")%>
@@ -8,7 +9,7 @@
 <div class="meals">
     <ol>
         <% @bag.dishes.each do |dish|%>
-            <li><%= "#{dish.name} ($#{dish.total_for_dish})" %></li>
+            <li><%= "#{dish.name} ($#{dish.total_for_dish.floor(3)})" %></li>
             
             <% dish.ingredients.each do |ingredient| %>
             <ul>
@@ -20,7 +21,21 @@
             <%= button_to "REMOVE MEAL", {:controller=>"dishes", :action=>"destroy", :id=>dish.id }, :method=>:delete %>
         <% end %>
     </ol>
+    <hr>
+    <div class="net">
+        <strong>Net Total:</strong>
+        <%= "$#{@net}"%>
+    </div>
+    <hr>
 </div>
+<br>
 
-<%= link_to "add another meal", "/order" %>
+<p class="add-another-meal"><%= link_to "add another meal", "/order" %></p>
+<br>
+<br>
+<hr>
+<a href="/checkout" class="checkout-button">CHECK OUT!</a>
+<hr>
+
+
 

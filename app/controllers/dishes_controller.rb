@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
-    before_action :ingredients_by_category, only: [:new_burrito, :new_burrito_bowl, :edit]
-    before_action :logged_in_check, only: [:new_burrito, :new_burrito_bowl]
+    before_action :ingredients_by_category, only: [:new_burrito, :new_burrito_bowl, :new_taco, :edit]
+    before_action :logged_in_check, only: [:new_burrito, :new_burrito_bowl, :new_taco]
     before_action :this_user, only: [:create, :update, :destroy]
 
     # def index
@@ -28,10 +28,14 @@ class DishesController < ApplicationController
         @dish = Dish.new(name: "Burrito Bowl", dish_price: 0, description: "Served In A Bowl With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/burrito-bowl.png")
     end
 
+    # def new_taco
+    #     @dish = Dish.create(name: "Taco", dish_price: 0, description: "Your Choice Of Three Tacos Filled With Meat or Sofritos, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/taco.png")
+    # end
+
     def create
         Dish.create_dish_ingredients(dish_param_id, ingredient_params)
         dish = Dish.find(dish_param_id)
-        dish.total_for_dish
+        dish.total_for_dish.round(3)
         dish.save
         dishbag = DishBag.create(dish: dish, bag: @user.bag)
         redirect_to "/bags/#{@user.bag.id}"

@@ -36,6 +36,7 @@ sour_cream = Ingredient.create(name: "Sour Cream", price: 0, category: "toppings
 fajita_veggies = Ingredient.create(name: "Fajita Veggies", price: 0, category: "toppings")
 cheese = Ingredient.create(name: "Cheese", price: 0, category: "toppings")
 romaine = Ingredient.create(name: "Romaine Lettuce", price: 0, category: "toppings")
+no_toppings = Ingredient.create(name: "No Toppings?...", price: 0, category: "toppings")
 
 # burrito = Dish.create(name: "Burrito", dish_price: 0, description: "Flour Tortilla With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/burrito.png")
 # burrito_bowl = Dish.create(name: "Burrito Bowl", dish_price: 0, description: "Served In A Bowl With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/burrito-bowl.png")

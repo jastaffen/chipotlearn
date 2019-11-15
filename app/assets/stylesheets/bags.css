@@ -1,0 +1,14 @@
+.bag-banner {
+    display: inline;
+    width: 100%;
+}
+
+h1 {
+    font-size: 25px;
+    position: relative;
+    top: 30px;
+}
+
+.bag-banner img {
+    display: inline;
+}
