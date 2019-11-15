@@ -4,6 +4,7 @@ body {
 
 .order-banner {
     position: fixed;
+    top: 0px;
     display: inline-flex;
     justify-content: space-evenly;
     border-bottom: 1px solid black;
@@ -18,17 +19,14 @@ body {
 }
 
 .dish-container {
-    top: 100px;
-    width: 100%;
-    position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-flow: wrap;
 }
 
 .box1 {
     position: relative;
-    width: 440px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
 }
 
 .box1:hover{
@@ -36,19 +34,35 @@ body {
 }
 
 .image1 {
-    left: 100px;
+    text-align: center;
     background: url('order/burrito.png');
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0px 10px 10px 0px;
 }
 .image2 {
-    right: 190px;
+    text-align: center;
     background: url('order/burrito-bowl.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px 10px 10px 0px;
+}
+.image3 {
+    text-align: center;
+    background: url('order/salad.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.image4 {
+    text-align: center;
+    background: url('order/taco.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+
 .box1-text-container {
+    align-content: center;
     position: absolute;
     top: 70%;
     left: 70%;
@@ -77,4 +91,8 @@ body {
     color:rgb(80, 18, 18);
 }
 
+.all{
+    margin: 75px auto;
+    width: 1024px;
+}
 

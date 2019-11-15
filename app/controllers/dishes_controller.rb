@@ -28,6 +28,14 @@ class DishesController < ApplicationController
         @dish = Dish.new(name: "Burrito Bowl", dish_price: 0, description: "Served In A Bowl With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/burrito-bowl.png")
     end
 
+    def new_salad
+        @dish = Dish.new(name: "Salad", dish_price: 0, description: "Served In A Bowl With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/salad.png")
+    end
+
+    def new_taco
+        @dish = Dish.new(name: "Taco", dish_price: 0, description: "Flour Tortilla With Your Choice of Meat, Sofritos, Rice, Beans, Or Fajita Veggies, Queso, Salsa, Guacamole, And Sour Cream, or Cheese, and Romaine Lettuce.", image_url: "order/taco.png")
+    end
+
     def create
         Dish.create_dish_ingredients(dish_param_id, ingredient_params)
         dish = Dish.find(dish_param_id)

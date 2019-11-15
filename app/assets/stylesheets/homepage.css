@@ -8,7 +8,12 @@ body {
     width: 100%;
     position: relative;
     top: 80px;
+    transition: width 0.5s;
 }
+
+.slogan-container:hover {
+    width: 25%;
+  }
 
 .slogan-container h2 {
     color: white;

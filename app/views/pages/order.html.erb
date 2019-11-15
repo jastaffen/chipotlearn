@@ -4,28 +4,46 @@
         <% if flash[:notification] %>
             <h5 class="flash-notification"><%= flash[:notification] %></h5><br>
         <% end %>
-        
-        <div class="dish-container">
-            <a href="/dishes/burrito/new" method="get">
-                <div class="box1 image1">
-                    <div class="box1-text-container">
-                        <p class="box1-title">Burrito</p>
-                        <p class="box1-title button">Order -></p>
-                    </div>
-                </div> 
-            </a>
+        <div class="all">
+            <div class="dish-container">
+                <a href="/dishes/burrito/new" method="get">
+                    <div class="box1 image1">
+                        <div class="box1-text-container">
+                            <p class="box1-title">Burrito</p>
+                            <p class="box1-title button">Order -></p>
+                        </div>
+                    </div> 
+                </a>
 
-            <a href="/dishes/burrito-bowl/new" method="get">
-                <div class="box1 image2">
-                    <div class="box1-text-container">
-                        <p class="box1-title">Burrito Bowl</p>
-                        <p class="box1-title button">Order -></p>
-                    </div>
-                </div> 
-            </a>
+                <a href="/dishes/burrito-bowl/new" method="get">
+                    <div class="box1 image2">
+                        <div class="box1-text-container">
+                            <p class="box1-title">Burrito Bowl</p>
+                            <p class="box1-title button">Order -></p>
+                        </div>
+                    </div> 
+                </a>
 
+                <a href="/dishes/salad/new" method="get">
+                    <div class="box1 image3">
+                        <div class="box1-text-container">
+                            <p class="box1-title">Salad</p>
+                            <p class="box1-title button">Order -></p>
+                        </div>
+                    </div> 
+                </a>
+
+                <a href="/dishes/taco/new" method="get">
+                    <div class="box1 image4">
+                        <div class="box1-text-container">
+                            <p class="box1-title">Taco</p>
+                            <p class="box1-title button">Order -></p>
+                        </div>
+                    </div> 
+                </a>
+
+            </div>
         </div>
-
 
     </body>
 </html>
