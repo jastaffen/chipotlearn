@@ -8,7 +8,6 @@ class ApiController < ApplicationController
     def location
         plussed_string = Api.add_plus(params)
         @chipotle_hash = Api.hash_boo(plussed_string)
-        byebug
         redirect_to "/api/select"
     end
 

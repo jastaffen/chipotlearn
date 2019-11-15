@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   get "/order", to: "pages#order"
 
+  get "/checkout", to: "pages#checkout"
+
   get "/users", to: "users#index"
   get "/users/new", to: "users#new", as: "new_user"
   post "/users/", to: "users#create"
@@ -19,12 +21,13 @@ Rails.application.routes.draw do
   get "dishes/:id", to: "dishes#show", as: "dish"
   get "dishes/burrito/new", to: "dishes#new_burrito", as: "new_burrito"
   get "dishes/burrito-bowl/new", to: "dishes#new_burrito_bowl", as: "new_burrito_bowl"
+  get "dishes/taco/new", to: "dishes#new_taco", as: "new_taco"
   post "dishes/", to: "dishes#create"
   get "dishes/:id/edit", to: "dishes#edit"
   patch "/dishes/:id", to: "dishes#update"
   delete "/dishes/:id", to: "dishes#destroy", as: 'delete_dish'
   
-  
+  get "/ingredients/", to: "ingredients#index"
  
   
   get "bags/:id", to: "bags#show", as: "bag"

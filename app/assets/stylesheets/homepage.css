@@ -17,6 +17,7 @@ body {
     position: flex;
     font-family: "Trade Gothic LT","Helvetica Neue",Arial,sans-serif;
     font-weight: 900;
+    z-index: 2;
 }
 
 
@@ -92,6 +93,7 @@ button {
 button:hover {
     background-color: rgb(52, 12, 12);
     cursor: pointer;
+    color: white;
 }
 
 
@@ -103,16 +105,18 @@ button:hover {
     padding: 20px;
     height: 25%;
     font-weight: bold;
-    color: white; 
     font-size: 11px;
+    color: white; 
 }
 
-button:active {
-}
 
 button .pepper-in-button {
     position: absolute;
     right: 170px
+}
+
+button a {
+    color: white;
 }
 
 

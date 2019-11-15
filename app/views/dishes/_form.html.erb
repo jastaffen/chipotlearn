@@ -12,11 +12,11 @@
 <div class="form">
     <%= form_for @dish do |f| %>
     <input type="hidden" name="dish" value="<%=@dish.save ? @dish.id : nil %>">
+       
         <fieldset>
             <legend>Choose Your Protein:</legend>
             
             <% @proteins.each do |protein| %>
-                
                 <%= f.label protein.name %><br>
                 $<%= protein.price %><br>
                 <input type="radio" name="ingredient[protein]" value="<%= protein.id %>" required><br>
@@ -54,7 +54,7 @@
 
         
 
-        <%= f.submit %>
+        <%= f.submit "Order!" %>
     <% end %>
     
 </div>

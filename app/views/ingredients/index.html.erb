@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    
+    <div class="ingredients-page">
+        <div class="title-bar"> 
+            <h1>REAL INGREDIENTS</h1>
+            <p>We have always been committed to preparing real food made with 
+            real ingredients. You know, the kind you can recognize and pronounce.</p>
+        </div>
+        <hr>
+        <% @ingredients.each do |ingredient| %>
+            <p class="ingredient-list"><%= ingredient.name unless ingredient.name == "No Beans" || ingredient.name == "No Rice" || ingredient.name == "No Toppings?..." %></p><br>
+        <% end %>
+
+    </div>
+</html>
