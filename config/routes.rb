@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   
   get "/order", to: "pages#order"
+  get "/our_values", to: "pages#our_values"
 
   get "/users", to: "users#index"
   get "/users/new", to: "users#new", as: "new_user"
@@ -24,6 +25,8 @@ Rails.application.routes.draw do
   patch "/dishes/:id", to: "dishes#update"
   delete "/dishes/:id", to: "dishes#destroy", as: 'delete_dish'
   
+  get "/dishes/:id", to: "dishes#show", as: "dish"
+
   
  
   

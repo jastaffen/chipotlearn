@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
     def order 
     end
+
+    def our_values
+    end
+    
 end
